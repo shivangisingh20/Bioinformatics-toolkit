@@ -1,10 +1,19 @@
 def gc_content(sequence):
-    sequence = sequence.upper()
-    gc = sequence.count("G") + sequence.count("C")
-    return (gc / len(sequence)) * 100
+    sequence = sequence.upper().strip()
 
-dna = input("Enter DNA sequence: ")
+    valid_bases = {"A", "T", "G", "C"}
 
-gc = gc_content(dna)
+    if not all(base in valid_bases for base in sequence):
+        print("Error: Invalid DNA sequence.")
+        return
 
-print(f"GC Content: {gc:.2f}%")
+    gc_count = sequence.count("G") + sequence.count("C")
+    gc_percentage = (gc_count / len(sequence)) * 100
+
+    print(f"\nSequence Length : {len(sequence)}")
+    print(f"GC Count        : {gc_count}")
+    print(f"GC Content      : {gc_percentage:.2f}%")
+
+dna_sequence = input("Enter DNA sequence: ")
+
+gc_content(dna_sequence)
