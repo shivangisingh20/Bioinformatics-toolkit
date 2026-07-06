@@ -22,7 +22,7 @@ The aim is tostrengthen my programming skills and apply them to biological data 
 - Data Processing
 
 ## Repository Structure
-
+```
 Bioinformatics-toolkit/
 │
 ├── GC_Content_Calculator/
@@ -31,6 +31,7 @@ Bioinformatics-toolkit/
 ├── FASTA_Parser/
 ├── Kmer_Counter/
 └── Motif_Finder/
+```
 
 I will continue adding new tools and improving this repository as i learn more.
 
